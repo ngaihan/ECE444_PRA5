@@ -20,6 +20,8 @@ def load_model():
     inputs = [
         "This is fake news",
         "Homeowners who regularly rent on Airbnb and other sites must pay 13% tax on property value when they sell, recent tax ruling finds",
+        "More straight couples are calling each other partners. Here's why",
+        "The 2020 election was not stolen. Anyone who claims it was is spreading THE BIG LIE",
     ]
     predictions = model.predict(vectorizer.transform(inputs))
     return jsonify({"predictions": predictions.tolist()})
